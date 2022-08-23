@@ -1,0 +1,9 @@
+steps:
+- name: 'docker'
+  args: ['build' , "-t", 'gcr.io/$PROJECT_ID/portfolio-website-image', '.']
+
+images:
+- 'gcr.io/$PROJECT_ID/portfolio-website-image'
+
+
+tags: ['gcp-cloud-build-portfolio-website']
