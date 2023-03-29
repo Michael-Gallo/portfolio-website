@@ -1,9 +1,3 @@
-FROM python:3.10-slim
-
-WORKDIR /app
-
-COPY requirements.txt requirements.txt
-RUN pip3 install -r requirements.txt
-
-COPY . .
-CMD ["python3" , "-m" , "flask", "run", "--host=0.0.0.0"]
+FROM nginx:latest
+COPY ./templates/index.html /usr/share/nginx/html
+COPY ./static /usr/share/nginx/html/static
