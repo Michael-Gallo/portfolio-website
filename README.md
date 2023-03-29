@@ -9,7 +9,5 @@ This is the source for my personal website which can be found at https://michael
  - Cloud Run
 - Gitlab
  - Repository Mirroring
-- Flask
+- Nginx
 - Docker
-
-Note - This website is a work in progress.
