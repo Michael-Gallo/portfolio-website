@@ -84,6 +84,10 @@
                 <div class="card-body">
                   <div class="h4 mt-0 title">Basic Information</div>
                   <div class="row mt-3">
+                    <div class="col-sm-4"><strong class="text-uppercase">Location:</strong></div>
+                    <div class="col-sm-8">Arlington, VA</div>
+                  </div>
+                  <div class="row mt-3">
                     <div class="col-sm-4"><strong class="text-uppercase">Email:</strong></div>
                     <div class="col-sm-8"><a href="mailto:me@michaelgallo.dev">me@michaelgallo.dev</a></div>
                   </div>
@@ -95,13 +99,13 @@
                     <div class="col-sm-4"><strong class="text-uppercase">LinkedIn:</strong></div>
                     <div class="col-sm-8">
                       <a
-                        href=https://www.linkedin.com/in/michael-gallo-8193669a />linkedin.com/in/michael-gallo-8193669a/</a>
+                        href="https://www.linkedin.com/in/michael-gallo-8193669a/">linkedin.com/in/michael-gallo-8193669a/</a>
                     </div>
                   </div>
                   <div class="row mt-3">
                     <div class="col-sm-4"><strong class="text-uppercase">GitHub:</strong></div>
                     <div class="col-sm-8">
-                      <a href=https://github.com/Michael-Gallo />github.com/Michael-Gallo/</a>
+                      <a href="https://github.com/Michael-Gallo/">github.com/Michael-Gallo/</a>
                     </div>
                   </div>
                 </div>
@@ -137,7 +141,7 @@
               </div>
               <div class="row">
                 <div class="col-md-6">
-                  <div class="progress-container progress-primary"><span class="progress-badge">Golang</span>
+                  <div class="progress-container progress-primary"><span class="progress-badge">Python</span>
                     <div class="progress">
                       <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10"
                         data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0"
@@ -189,12 +193,24 @@
           </div>
           <div class="tab-content gallery mt-5">
             <div class="tab-pane active" id="web-development">
-              <div class="ml-auto mr-auto">
-                <div class="row">
-                  <div class="col-md-6">
+              <div class="row portfolio-row">
+                  <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                      <a href="https://github.com/Michael-Gallo/simpleical" target="_blank">
+                        <figure class="cc-effect"><img class="portfolio-icon-img" src="static/images/simpleical.webp"
+                            alt="ICS calendar file icon" />
+                          <figcaption>
+                            <div class="h4">simpleical</div>
+                            <p>High-performance iCalendar parsing library written in Go</p>
+                          </figcaption>
+                        </figure>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-4 mb-4">
                     <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
                       <a href="https://gitlab.com/michaelagallo95/ansible-config" target="_blank">
-                        <figure class="cc-effect"><img src="static/images/ansible.webp" alt="Image" />
+                        <figure class="cc-effect"><img src="static/images/ansible.webp" alt="Ansible logo" />
                           <figcaption>
                             <div class="h4">Ansible</div>
                             <p>My personal ansible playbook</p>
@@ -203,10 +219,10 @@
                       </a>
                     </div>
                   </div>
-                  <div class="col-md-6">
+                  <div class="col-12 col-md-6 col-lg-4 mb-4">
                     <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
                       <a href="https://gitlab.com/michaelagallo95/portfolio-website">
-                        <figure class="cc-effect"><img src="static/images/gcp.webp" alt="Image" />
+                        <figure class="cc-effect"><img src="static/images/gcp.webp" alt="Google Cloud logo" />
                           <figcaption>
                             <div class="h4">Serverless Portfolio Website</div>
                             <p>This website</p>
@@ -216,7 +232,6 @@
                     </div>
                   </div>
                 </div>
-              </div>
             </div>
           </div>
         </div>
@@ -234,18 +249,17 @@
               </div>
               <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
                 <div class="card-body">
-                  <div class="h5">Senior Software Engineer</div>
+                  <div class="h5">Tech Lead</div>
                   <p>
-                    Design, develop, test and deploy features for a federated Golang GraphQL Gqlgen data mesh for top 15
-                    bank; allows data to be shared across enterprise while complying with regulatory and internal
-                    requirements, serving ~1 million requests per day
+                    Lead technical delivery for a federated Golang GraphQL Gqlgen data mesh for a top 15 bank; allows
+                    data to be shared across the enterprise while complying with regulatory and internal requirements,
+                    serving ~5 million requests per day.
                     <br><br>
-                    Served as DMN SME for rule engine for top 15 bank. Supported client in the development of new
-                    business rules and led rule deployments. Developed Python XML diff tool using lxml to generate
-                    human readable explanation of changes within a DMN. Led Jmeter performance testing of rule engine.
-
+                    Served as DMN SME for a rule engine for the same client. Supported the client in the development of
+                    new business rules and led rule deployments. Developed a Python XML diff tool using lxml to generate
+                    human-readable explanations of changes within a DMN. Led JMeter performance testing of the rule
+                    engine.
                   </p>
-
                 </div>
               </div>
             </div>
@@ -278,18 +292,15 @@
         <div class="container" style="max-width: 50%;">
           <div class="row justify-content-center">
             <div class="col-md-6 col-lg-4 col-sm-6 mb-4">
-              <a href="https://www.credly.com/badges/3fef3816-2559-4d08-bb71-123a2a652292" target="_blank">
-                <img src="/static/images/aws-certified-developer-associate.webp" class="img-fluid"
-                  alt="AWS Certified Developer Associate, Apr 2024">
+              <a href="https://www.credential.net/45b2302b-cbc8-451f-9067-2b26e42a0763" target="_blank">
+                <img src="/static/images/gcp-ace.webp" class="img-fluid" alt="GCP ACE Certification" align="center">
               </a>
-              <p class="text-center mt-2">AWS Certified Developer Associate (Apr 2024)</p>
             </div>
             <div class="col-md-6 col-lg-4 col-sm-6 mb-4">
-              <a href="https://www.credential.net/45b2302b-cbc8-451f-9067-2b26e42a0763" target="_blank">
-                <img src="/static/images/gcp-ace.webp" class="img-fluid"
-                  alt="Google Cloud Platform Associate Cloud Engineer, Aug 2022" align="center">
+              <a href="https://www.credly.com/badges/3fef3816-2559-4d08-bb71-123a2a652292" target="_blank">
+                <img src="/static/images/aws-certified-developer-associate.webp" class="img-fluid"
+                  alt="AWS Certified Developer Associate">
               </a>
-              <p class="text-center mt-2">GCP Associate Cloud Engineer (Aug 2022)</p>
             </div>
           </div>
         </div>
@@ -316,7 +327,8 @@
   </div>
   <footer class=" footer">
     <p>&copy; Creative CV. All rights reserved.<br>Design - <a class="credit" href="https://templateflip.com"
-        target="_blank">TemplateFlip</a></p>
+        target="_blank">TemplateFlip</a><br>ICS icon by <a class="credit"
+        href="https://www.flaticon.com/free-icon/ics-format_2306102" target="_blank" rel="noopener">Flaticon</a></p>
     </div>
   </footer>
   <script src="static/js/core/jquery.3.2.1.min.js?ver=1.1.0"></script>
