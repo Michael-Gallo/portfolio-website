@@ -1,0 +1,16 @@
+
+# Ignore key files for decrypting credentials and more.
+/config/*.key
+
+# Ignore local development dependencies and generated artifacts.
+/.bundle/
+/vendor/bundle/
+/public/assets/
+/log/*
+/tmp/**
+!/log/.keep
+!/tmp/.keep
+!/tmp/pids/
+/tmp/pids/**
+!/tmp/pids/.keep
+
