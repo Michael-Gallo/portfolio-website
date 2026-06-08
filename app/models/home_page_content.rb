@@ -1,0 +1,68 @@
+class HomePageContent
+  def self.skills
+    [
+      { name: "Golang", proficiency: 90, progress_width: 80 },
+      { name: "Linux", proficiency: 85, progress_width: 75 },
+      { name: "Python", proficiency: 60, progress_width: 70 },
+      { name: "Amazon Web Services", proficiency: 60, progress_width: 60 },
+      { name: "Bash", proficiency: 70, progress_width: 50 },
+      { name: "Docker", proficiency: 50, progress_width: 45 }
+    ]
+  end
+
+  def self.portfolio_items
+    [
+      {
+        name: "simpleical",
+        description: "High-performance iCalendar parsing library written in Go",
+        url: "https://github.com/Michael-Gallo/simpleical",
+        image: "simpleical.webp",
+        image_options: { class: "portfolio-icon-img", alt: "ICS calendar file icon" }
+      },
+      {
+        name: "Ansible",
+        description: "My personal ansible playbook",
+        url: "https://gitlab.com/michaelagallo95/ansible-config",
+        image: "ansible.webp",
+        image_options: { alt: "Ansible logo" }
+      },
+      {
+        name: "Serverless Portfolio Website",
+        description: "This website",
+        url: "https://gitlab.com/michaelagallo95/portfolio-website",
+        image: "gcp.webp",
+        image_options: { alt: "Google Cloud logo" }
+      }
+    ]
+  end
+
+  def self.experiences
+    [
+      {
+        dates: "July 2021 - Present",
+        company: "Accenture",
+        title: "Tech Lead",
+        description: [
+          "Lead technical delivery for a federated Golang GraphQL Gqlgen data mesh for a top 15 bank; allows " \
+            "data to be shared across the enterprise while complying with regulatory and internal requirements, " \
+            "serving ~5 million requests per day.",
+          "Served as DMN SME for a rule engine for the same client. Supported the client in the development of " \
+            "new business rules and led rule deployments. Developed a Python XML diff tool using lxml to generate " \
+            "human-readable explanations of changes within a DMN. Led JMeter performance testing of the rule engine."
+        ]
+      },
+      {
+        dates: "February 2019 - July 2021",
+        company: "JD Sports",
+        title: "Software Developer",
+        description: [
+          "Achieved 400% year over year growth by automating key processes as the sole developer at a small " \
+            "e-commerce firm. Led the entire development cycle for a Python sales reporting software to " \
+            "automate the restocking and vendor tracking report generation process; provided automated emails " \
+            "with report to back office team of 4 people Served as primary purchaser for six key wholesale " \
+            "accounts with annual spend per account of up to $500k."
+        ]
+      }
+    ]
+  end
+end

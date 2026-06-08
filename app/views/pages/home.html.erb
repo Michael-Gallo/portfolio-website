@@ -68,22 +68,12 @@
         </div>
       </div>
     </div>
-    <%
-      skills = [
-        { name: "Golang", proficiency: 90, progress_width: 80 },
-        { name: "Linux", proficiency: 85, progress_width: 75 },
-        { name: "Python", proficiency: 60, progress_width: 70 },
-        { name: "Amazon Web Services", proficiency: 60, progress_width: 60 },
-        { name: "Bash", proficiency: 70, progress_width: 50 },
-        { name: "Docker", proficiency: 50, progress_width: 45 }
-      ]
-    %>
     <div class="section" id="skill">
       <div class="container">
         <div class="h4 text-center mb-4 title">Professional Skills</div>
         <div class="card" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
           <div class="card-body">
-            <% skills.each_slice(2) do |skill_row| %>
+            <% @skills.each_slice(2) do |skill_row| %>
               <div class="row">
                 <% skill_row.each do |skill| %>
                   <div class="col-md-6">
@@ -103,31 +93,6 @@
         </div>
       </div>
     </div>
-    <%
-      portfolio_items = [
-        {
-          name: "simpleical",
-          description: "High-performance iCalendar parsing library written in Go",
-          url: "https://github.com/Michael-Gallo/simpleical",
-          image: "simpleical.webp",
-          image_options: { class: "portfolio-icon-img", alt: "ICS calendar file icon" }
-        },
-        {
-          name: "Ansible",
-          description: "My personal ansible playbook",
-          url: "https://gitlab.com/michaelagallo95/ansible-config",
-          image: "ansible.webp",
-          image_options: { alt: "Ansible logo" }
-        },
-        {
-          name: "Serverless Portfolio Website",
-          description: "This website",
-          url: "https://gitlab.com/michaelagallo95/portfolio-website",
-          image: "gcp.webp",
-          image_options: { alt: "Google Cloud logo" }
-        }
-      ]
-    %>
     <div class="section" id="portfolio">
       <div class="container">
         <div class="row">
@@ -138,7 +103,7 @@
         <div class="tab-content gallery mt-5">
           <div class="tab-pane active" id="web-development">
             <div class="row portfolio-row">
-              <% portfolio_items.each do |item| %>
+              <% @portfolio_items.each do |item| %>
                 <div class="col-12 col-md-6 col-lg-4 mb-4">
                   <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
                     <%= link_to item[:url], target: "_blank", rel: "noopener" do %>
@@ -160,52 +125,24 @@
     <div class="section" id="experience">
       <div class="container cc-experience">
         <div class="h4 text-center mb-4 title">Work Experience</div>
-        <div class="card">
-          <div class="row">
-            <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
-              <div class="card-body cc-experience-header">
-                <p>July 2021 - Present</p>
-                <div class="h5">Accenture</div>
+        <% @experiences.each do |experience| %>
+          <div class="card">
+            <div class="row">
+              <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
+                <div class="card-body cc-experience-header">
+                  <p><%= experience[:dates] %></p>
+                  <div class="h5"><%= experience[:company] %></div>
+                </div>
               </div>
-            </div>
-            <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-              <div class="card-body">
-                <div class="h5">Tech Lead</div>
-                <p>
-                  Lead technical delivery for a federated Golang GraphQL Gqlgen data mesh for a top 15 bank; allows
-                  data to be shared across the enterprise while complying with regulatory and internal requirements,
-                  serving ~5 million requests per day.
-                  <br><br>
-                  Served as DMN SME for a rule engine for the same client. Supported the client in the development of
-                  new business rules and led rule deployments. Developed a Python XML diff tool using lxml to generate
-                  human-readable explanations of changes within a DMN. Led JMeter performance testing of the rule
-                  engine.
-                </p>
+              <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+                <div class="card-body">
+                  <div class="h5"><%= experience[:title] %></div>
+                  <p><%= safe_join(experience[:description], tag.br + tag.br) %></p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="card">
-          <div class="row">
-            <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
-              <div class="card-body cc-experience-header">
-                <p>February 2019 - July 2021</p>
-                <div class="h5">JD Sports</div>
-              </div>
-            </div>
-            <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-              <div class="card-body">
-                <div class="h5">Software Developer</div>
-                <p>Achieved 400% year over year growth by automating key processes as the sole developer at a small
-                  e-commerce firm. Led the entire development cycle for a Python sales reporting software to
-                  automate the restocking and vendor tracking report generation process; provided automated emails
-                  with report to back office team of 4 people Served as primary purchaser for six key wholesale
-                  accounts with annual spend per account of up to $500k.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <% end %>
       </div>
     </div>
     <div class="section" id="certifications">
