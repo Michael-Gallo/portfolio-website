@@ -1,6 +1,6 @@
 <svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
   <title id="title">Michael Gallo monogram</title>
-  <desc id="desc">A green rounded square icon with the initials MG.</desc>
-  <rect width="512" height="512" rx="112" fill="#378C3F"/>
-  <text x="256" y="306" fill="#f8fafc" font-family="Montserrat, Arial, Helvetica, sans-serif" font-size="184" font-weight="700" text-anchor="middle" letter-spacing="-9">MG</text>
+  <desc id="desc">A green square icon with a white MG monogram.</desc>
+  <rect width="512" height="512" fill="#378C3F"/>
+  <text x="256" y="307" fill="#FFFFFF" font-family="Georgia, 'Times New Roman', serif" font-size="178" font-weight="700" text-anchor="middle" letter-spacing="-10">MG</text>
 </svg>
