@@ -55,6 +55,51 @@ Write the post body in Markdown.
 
 The filename is used as the slug unless a `slug` field is provided.
 
+### Images
+
+Blog images live in `public/blog-images/<post-slug>/` and are served at `/blog-images/<post-slug>/...`.
+
+Cursor's built-in image paste is unreliable on Linux, so use the project scripts instead.
+
+**Paste an image**
+
+1. Copy an image to your clipboard (screenshot, etc.)
+2. With the post open, run **Tasks: Run Task** → **Paste Blog Image**  
+   Or from the project root: `bin/paste-blog-image content/posts/hello-rails-blog.md`
+3. The image is saved under `public/blog-images/<slug>/` and the markdown link is copied to your clipboard
+4. **Ctrl+V** in the post to insert the link
+
+Optional custom filename:
+
+```sh
+bin/paste-blog-image content/posts/hello-rails-blog.md --name proton-recurring-event-weirdness "Alt text"
+```
+
+**Rename a post**
+
+After renaming a post file in Cursor, run **Tasks: Run Task** → **Sync Blog Post**  
+Or:
+
+```sh
+bin/sync-blog-post content/posts/new-filename.md
+```
+
+That moves `public/blog-images/<old-slug>/` to match the current slug and rewrites image paths in the post.
+
+To rename the file and sync in one step:
+
+```sh
+bin/rename-blog-post content/posts/hello-rails-blog.md why-i-left-proton
+```
+
+The slug comes from the `slug:` frontmatter field when present, otherwise from the filename.
+
+You can also reference images directly:
+
+```md
+![Alt text](/blog-images/hello-rails-blog/screenshot.png)
+```
+
 ## Deployment
 
 The app remains Dockerized and includes Kamal configuration in `config/deploy.yml`.

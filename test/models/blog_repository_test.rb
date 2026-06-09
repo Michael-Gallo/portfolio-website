@@ -23,6 +23,24 @@ class BlogRepositoryTest < ActiveSupport::TestCase
     assert_includes post.html, "<h2"
   end
 
+  test "rewrites pasted image paths to site-root blog image urls" do
+    post = parse_markdown(<<~MARKDOWN)
+      ---
+      title: Image Post
+      date: 2026-01-02
+      description: Image path rewrite test.
+      ---
+
+      ![Relative](../../public/blog-images/image-post/screenshot.png)
+      ![Broken](${workspaceFolder}/public/blog-images/image-post/screenshot-2.png)
+      ![Absolute](/blog-images/image-post/screenshot-3.png)
+    MARKDOWN
+
+    assert_includes post.html, 'src="/blog-images/image-post/screenshot.png"'
+    assert_includes post.html, 'src="/blog-images/image-post/screenshot-2.png"'
+    assert_includes post.html, 'src="/blog-images/image-post/screenshot-3.png"'
+  end
+
   test "raises for missing required frontmatter" do
     error = assert_raises(BlogRepository::InvalidPost) do
       parse_markdown(<<~MARKDOWN)

@@ -35,7 +35,7 @@ class BlogRepository
         description: required(frontmatter, "description", path),
         tags: Array(frontmatter["tags"]),
         body: body,
-        html: Kramdown::Document.new(body, input: "kramdown").to_html
+        html: render_html(body)
       )
     rescue Psych::SyntaxError => e
       raise InvalidPost, "#{path} has invalid YAML frontmatter: #{e.message}"
@@ -46,6 +46,24 @@ class BlogRepository
       return value if value.present?
 
       raise InvalidPost, "#{path} is missing required frontmatter field: #{key}"
+    end
+
+    def render_html(body)
+      normalized_body = body.gsub(%r{!\[([^\]]*)\]\(([^)]+)\)}) do
+        alt = Regexp.last_match(1)
+        path = Regexp.last_match(2)
+        normalized_path = normalize_blog_image_path(path)
+
+        normalized_path == path ? Regexp.last_match(0) : "![#{alt}](#{normalized_path})"
+      end
+
+      Kramdown::Document.new(normalized_body, input: "kramdown").to_html
+    end
+
+    def normalize_blog_image_path(path)
+      return path if path.match?(%r{\Ahttps?://}) || !path.include?("blog-images/")
+
+      "/blog-images/#{path.split("blog-images/", 2).last}"
     end
 
     def parse_date(value, path)

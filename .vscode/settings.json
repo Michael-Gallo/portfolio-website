@@ -1,0 +1,7 @@
+{
+  "editor.pasteAs.enabled": true,
+  "markdown.editor.filePaste.enabled": "smart",
+  "markdown.copyFiles.destination": {
+    "content/posts/**": "/public/blog-images/${documentBaseName}/${fileName}"
+  }
+}
