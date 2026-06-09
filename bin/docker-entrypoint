@@ -1,9 +1,3 @@
 #!/bin/bash -e
 
-# Cloud Run sets PORT (default 8080). Thruster listens on HTTP_PORT and proxies
-# to Puma on TARGET_PORT (default 3000).
-if [ -n "${PORT:-}" ] && [ -z "${HTTP_PORT:-}" ]; then
-  export HTTP_PORT="$PORT"
-fi
-
 exec "${@}"
