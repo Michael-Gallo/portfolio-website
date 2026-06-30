@@ -1,0 +1,30 @@
+{{ define "main" }}
+<div class="page-content blog-page">
+  <div class="section">
+    <div class="container">
+      <article class="card" data-aos="fade-up">
+        <div class="card-body blog-post">
+          <p class="category">{{ .Date.Format "January 2, 2006" }}</p>
+          <h1 class="h3 mt-0 title">{{ .Title }}</h1>
+          <p class="lead">{{ .Description }}</p>
+
+          {{ with .Params.tags }}
+          <p class="blog-tags">
+            {{ range . }}<span class="badge badge-primary">{{ . }}</span>{{ end }}
+          </p>
+          {{ end }}
+
+          <div class="blog-post-body">
+            {{ .Content }}
+          </div>
+
+          <p class="mt-4">
+            {{ with .Site.GetPage "blog" }}<a href="{{ .RelPermalink }}" class="btn btn-primary btn-round">Back to all posts</a>{{ end }}
+            <a href="{{ .Site.Home.RelPermalink }}" class="btn btn-primary btn-round">Back to portfolio</a>
+          </p>
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
+{{ end }}

@@ -1,0 +1,27 @@
+.blog-page {
+  padding-top: 90px;
+}
+
+.blog-page .card {
+  margin-bottom: 24px;
+}
+
+.blog-page .title a {
+  color: inherit;
+}
+
+.blog-tags .badge {
+  margin-right: 6px;
+}
+
+.blog-post-body {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-top: 2rem;
+}
+
+.blog-post-body code {
+  background: rgba(0, 0, 0, 0.06);
+  border-radius: 4px;
+  padding: 0.1rem 0.3rem;
+}

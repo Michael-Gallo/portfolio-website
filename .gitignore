@@ -1,16 +1,11 @@
+# Hugo output
+/public/
+/resources/_gen/
+.hugo_build.lock
 
-# Ignore key files for decrypting credentials and more.
-/config/*.key
+# OS
+.DS_Store
 
-# Ignore local development dependencies and generated artifacts.
-/.bundle/
-/vendor/bundle/
-/public/assets/
-/log/*
-/tmp/**
-!/log/.keep
-!/tmp/.keep
-!/tmp/pids/
-/tmp/pids/**
-!/tmp/pids/.keep
-
+# Editor
+*.swp
+*.swo
