@@ -32,8 +32,8 @@ portfolio_items:
     description: This website
     url: https://gitlab.com/michaelagallo95/portfolio-website
     image: gcp.webp
-    image_width: 600
-    image_height: 375
+    image_width: 400
+    image_height: 250
     image_alt: Google Cloud logo
 
 experiences:
