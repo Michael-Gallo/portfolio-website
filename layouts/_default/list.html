@@ -7,7 +7,7 @@
 
       {{ if .Pages }}
         {{ range .Pages }}
-        <article class="card" data-aos="fade-up">
+        <article class="card">
           <div class="card-body">
             <p class="category">{{ .Date.Format "January 2, 2006" }}</p>
             <h1 class="h4 mt-0 title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>

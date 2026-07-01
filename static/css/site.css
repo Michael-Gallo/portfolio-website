@@ -1,0 +1,45 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
+}
+
+.nav-toggle {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.nav-backdrop {
+  display: none;
+}
+
+@media screen and (max-width: 991px) {
+  html:has(#nav-toggle:checked) .sidebar-collapse .navbar-collapse {
+    transform: translate3d(0, 0, 0);
+  }
+
+  html:has(#nav-toggle:checked) .sidebar-collapse .wrapper {
+    transform: translate3d(-150px, 0, 0);
+  }
+
+  html:has(#nav-toggle:checked) .sidebar-collapse .navbar-translate {
+    transform: translate3d(-300px, 0, 0);
+  }
+
+  html:has(#nav-toggle:checked) .nav-backdrop {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 300px;
+    left: 0;
+    bottom: 0;
+    z-index: 9999;
+    cursor: pointer;
+  }
+}
