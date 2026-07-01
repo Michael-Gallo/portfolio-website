@@ -28,13 +28,13 @@ portfolio_items:
     image_width: 768
     image_height: 480
     image_alt: Ansible logo
-  - name: Serverless Portfolio Website
+  - name: Portfolio Website
     description: This website
-    url: https://gitlab.com/michaelagallo95/portfolio-website
-    image: gcp.webp
+    url: https://github.com/Michael-Gallo/portfolio-website
+    image: hugo.webp
     image_width: 400
     image_height: 250
-    image_alt: Google Cloud logo
+    image_alt: Hugo logo
 
 experiences:
   - dates: July 2021 - Present
