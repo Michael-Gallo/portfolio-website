@@ -421,7 +421,6 @@ p {
 }
 
 .navbar {
-  position: relative;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -433,6 +432,11 @@ p {
   letter-spacing: 1px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
   transition: all 300ms ease;
+}
+
+.navbar.fixed-top {
+  position: fixed;
+  margin-bottom: 0;
 }
 
 .navbar > .container {
@@ -507,6 +511,15 @@ p {
   padding-top: 20px;
 }
 
+.navbar.navbar-transparent .navbar-brand,
+.navbar.navbar-transparent .nav-link {
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.75);
+}
+
+.navbar.navbar-transparent .navbar-toggler-bar {
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.75);
+}
+
 @media (max-width: 991px) {
   .navbar-expand-lg > .container {
     padding-right: 0;
@@ -536,6 +549,8 @@ p {
 
   .navbar-expand-lg .navbar-collapse {
     display: flex !important;
+    flex-basis: auto;
+    flex-grow: 1;
   }
 
   .navbar-expand-lg .navbar-toggler {
@@ -615,6 +630,15 @@ p {
     position: relative;
     transform: translate3d(0, 0, 0);
     transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
+  }
+
+  .sidebar-collapse .navbar .navbar-toggler {
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   .sidebar-collapse .navbar .navbar-toggler-bar {
