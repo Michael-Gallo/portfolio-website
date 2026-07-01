@@ -22,8 +22,10 @@
     {{ with .Site.Home.OutputFormats.Get "RSS" }}
     <link rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }} Blog" href="{{ .Permalink | absURL }}">
     {{ end }}
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet">
-    <link href="{{ "css/blog.css" | relURL }}" rel="stylesheet">
+    {{ if .IsHome }}
+    <link rel="preload" as="image" href="{{ "images/cc-bg-1-1200.webp" | relURL }}" imagesrcset="{{ "images/cc-bg-1-800.webp" | relURL }} 800w, {{ "images/cc-bg-1-1200.webp" | relURL }} 1200w" imagesizes="100vw" fetchpriority="high">
+    {{ end }}
+    {{ if not .IsHome }}<link href="{{ "css/blog.css" | relURL }}" rel="stylesheet">{{ end }}
     <link href="{{ "css/site.css" | relURL }}" rel="stylesheet">
   </head>
 

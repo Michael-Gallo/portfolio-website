@@ -7,7 +7,7 @@
   --color-white: #fff;
   --shadow-card: 0 5px 25px rgba(0, 0, 0, 0.2);
   --shadow-raised: 0 10px 25px rgba(0, 0, 0, 0.3);
-  --font-sans: "Montserrat", "Helvetica Neue", arial, sans-serif;
+  --font-sans: system-ui, -apple-system, "Segoe UI", roboto, "Helvetica Neue", arial, sans-serif;
 }
 
 /* Reset */
