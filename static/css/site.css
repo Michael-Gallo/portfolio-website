@@ -704,8 +704,19 @@ p {
   width: 100%;
   height: 100%;
   z-index: -1;
-  background-size: cover;
-  background-position: center center;
+  overflow: hidden;
+}
+
+.page-header .page-header-image picture,
+.page-header .page-header-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.page-header .page-header-image img {
+  object-fit: cover;
+  object-position: center center;
 }
 
 .page-header::before {
