@@ -83,8 +83,9 @@
                 <div class="progress-container progress-primary">
                   <span class="progress-badge">{{ $skill.name }}</span>
                   <div class="progress">
-                    <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="{{ $skill.proficiency }}"
-                      aria-valuemin="0" aria-valuemax="100" style="width: {{ $skill.proficiency }}%;"></div><span class="progress-value">{{ $skill.proficiency }}%</span>
+                    <div class="progress-bar progress-bar-primary" role="progressbar" aria-label="{{ $skill.name }} proficiency"
+                      aria-valuenow="{{ $skill.proficiency }}" aria-valuemin="0" aria-valuemax="100"
+                      style="width: {{ $skill.proficiency }}%;"></div><span class="progress-value">{{ $skill.proficiency }}%</span>
                   </div>
                 </div>
               </div>
@@ -109,7 +110,7 @@
               <div class="col-12 col-md-6 col-lg-4 mb-4">
                 <div class="cc-porfolio-image img-raised">
                   <a href="{{ .url }}" target="_blank" rel="noopener">
-                    <figure class="cc-effect"><img{{ with .image_class }} class="{{ . }}"{{ end }} src="{{ printf "images/%s" .image | relURL }}" alt="{{ .image_alt }}">
+                    <figure class="cc-effect"><img{{ with .image_class }} class="{{ . }}"{{ end }} src="{{ printf "images/%s" .image | relURL }}" width="{{ .image_width }}" height="{{ .image_height }}" alt="{{ .image_alt }}">
                       <figcaption>
                         <div class="h4">{{ .name }}</div>
                         <p>{{ .description }}</p>
@@ -154,7 +155,7 @@
           {{ range hugo.Data.homepage.certifications }}
           <div class="col-md-6 col-lg-4 col-sm-6 mb-4">
             <a href="{{ .url }}" target="_blank" rel="noopener">
-              <img src="{{ printf "images/%s" .image | relURL }}" class="img-fluid" alt="{{ .alt }}">
+              <img src="{{ printf "images/%s" .image | relURL }}" class="img-fluid" width="{{ .image_width }}" height="{{ .image_height }}" alt="{{ .alt }}">
             </a>
           </div>
           {{ end }}

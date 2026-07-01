@@ -17,17 +17,23 @@ portfolio_items:
     description: High-performance iCalendar parsing library written in Go
     url: https://github.com/Michael-Gallo/simpleical
     image: simpleical.webp
+    image_width: 320
+    image_height: 320
     image_class: portfolio-icon-img
     image_alt: ICS calendar file icon
   - name: Ansible
     description: My personal ansible playbook
     url: https://gitlab.com/michaelagallo95/ansible-config
     image: ansible.webp
+    image_width: 768
+    image_height: 480
     image_alt: Ansible logo
   - name: Serverless Portfolio Website
     description: This website
     url: https://gitlab.com/michaelagallo95/portfolio-website
     image: gcp.webp
+    image_width: 600
+    image_height: 375
     image_alt: Google Cloud logo
 
 experiences:
@@ -46,7 +52,11 @@ experiences:
 certifications:
   - url: https://verify.skilljar.com/c/nckymmk8aonm
     image: anthropic-logo.webp
+    image_width: 340
+    image_height: 340
     alt: "Claude Certified Architect – Foundations Certification"
   - url: https://www.credly.com/badges/3fef3816-2559-4d08-bb71-123a2a652292
     image: aws-certified-developer-associate.webp
+    image_width: 340
+    image_height: 340
     alt: "AWS Certified Developer Associate"

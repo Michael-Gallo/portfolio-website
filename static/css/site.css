@@ -1,9 +1,9 @@
 /* Brand tokens */
 :root {
-  --color-primary: #378c3f;
-  --color-primary-hover: #40a249;
+  --color-primary: #287130;
+  --color-primary-hover: #31883a;
   --color-text: #2c2c2c;
-  --color-muted: #9a9a9a;
+  --color-muted: #707070;
   --color-white: #fff;
   --shadow-card: 0 5px 25px rgba(0, 0, 0, 0.2);
   --shadow-raised: 0 10px 25px rgba(0, 0, 0, 0.3);
