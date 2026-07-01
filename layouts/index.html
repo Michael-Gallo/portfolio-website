@@ -4,7 +4,7 @@
     <div class="profile-page">
       <div class="wrapper">
         <div class="page-header page-header-small" filter-color="green">
-          <div class="page-header-image" data-parallax="true"
+          <div class="page-header-image"
             style="background-image: url('{{ "images/cc-bg-1.webp" | relURL }}')">
           </div>
           <div class="container">
@@ -12,7 +12,7 @@
               <div class="cc-profile-image"><a href="#"><img src="{{ "images/profile.webp" | relURL }}" alt="Michael Gallo"></a></div>
               <div class="h2 title">Michael Anthony Gallo</div>
               <p class="category text-white">Golang, Python, Linux, AWS</p>
-              <a href="{{ "images/Michael-Gallo-Resume.pdf" | relURL }}" class="btn btn-primary mr-2" data-aos="zoom-in" data-aos-anchor="data-aos-anchor">Resume</a>
+              <a href="{{ "images/Michael-Gallo-Resume.pdf" | relURL }}" class="btn btn-primary mr-2">Resume</a>
             </div>
           </div>
         </div>
@@ -20,7 +20,7 @@
     </div>
     <div class="section" id="about">
       <div class="container">
-        <div class="card" data-aos="fade-up" data-aos-offset="10">
+        <div class="card">
           <div class="row">
             <div class="col-lg-6 col-md-12">
               <div class="card-body">
@@ -69,7 +69,7 @@
     <div class="section" id="skill">
       <div class="container">
         <div class="h4 text-center mb-4 title">Professional Skills</div>
-        <div class="card" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+        <div class="card">
           <div class="card-body">
             {{ $skills := hugo.Data.homepage.skills }}
             {{ range $i, $skill := $skills }}
@@ -78,9 +78,8 @@
                 <div class="progress-container progress-primary">
                   <span class="progress-badge">{{ $skill.name }}</span>
                   <div class="progress">
-                    <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10"
-                      data-aos-duration="2000" role="progressbar" aria-valuenow="{{ $skill.proficiency }}"
-                      aria-valuemin="0" aria-valuemax="100" style="width: {{ $skill.progress_width }}%;"></div><span class="progress-value">{{ $skill.proficiency }}%</span>
+                    <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="{{ $skill.proficiency }}"
+                      aria-valuemin="0" aria-valuemax="100" style="width: {{ $skill.proficiency }}%;"></div><span class="progress-value">{{ $skill.proficiency }}%</span>
                   </div>
                 </div>
               </div>
@@ -103,7 +102,7 @@
             <div class="row portfolio-row">
               {{ range hugo.Data.homepage.portfolio_items }}
               <div class="col-12 col-md-6 col-lg-4 mb-4">
-                <div class="cc-porfolio-image img-raised" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                <div class="cc-porfolio-image img-raised">
                   <a href="{{ .url }}" target="_blank" rel="noopener">
                     <figure class="cc-effect"><img{{ with .image_class }} class="{{ . }}"{{ end }} src="{{ printf "images/%s" .image | relURL }}" alt="{{ .image_alt }}">
                       <figcaption>
@@ -126,13 +125,13 @@
         {{ range hugo.Data.homepage.experiences }}
         <div class="card">
           <div class="row">
-            <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
+            <div class="col-md-3 bg-primary">
               <div class="card-body cc-experience-header">
                 <p>{{ .dates }}</p>
                 <div class="h5">{{ .company }}</div>
               </div>
             </div>
-            <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
+            <div class="col-md-9">
               <div class="card-body">
                 <div class="h5">{{ .title }}</div>
                 <p>{{ delimit .description "<br><br>" | safeHTML }}</p>

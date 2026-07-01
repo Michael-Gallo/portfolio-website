@@ -18,7 +18,8 @@ assert_contains public/index.html "Michael Anthony Gallo"
 assert_contains public/index.html "Golang, Python, Linux, AWS"
 assert_exists public/blog/why-leave-proton/index.html
 assert_contains public/blog/why-leave-proton/index.html "ProtonMail"
-assert_exists public/feed.atom
+assert_exists public/index.xml
+assert_contains public/index.xml "Why I left Proton"
 assert_exists public/sitemap.xml
 
 echo "All checks passed."

@@ -2,6 +2,7 @@ baseURL = "https://michaelgallo.dev/"
 title = "Michael Gallo"
 enableRobotsTXT = false
 disableKinds = ["taxonomy", "term"]
+summaryLength = 100000
 
 [params]
   description = "Michael Gallo is a senior software engineer specializing in Go, Python, Linux, AWS, and scalable backend systems."
@@ -10,15 +11,6 @@ disableKinds = ["taxonomy", "term"]
   blog = "/blog/:slugorcontentbasename"
 
 [outputs]
-  home = ["HTML", "Atom"]
+  home = ["HTML", "RSS"]
   section = ["HTML"]
   page = ["HTML"]
-
-[mediaTypes."application/atom+xml"]
-  suffixes = ["atom"]
-
-[outputFormats.Atom]
-  baseName = "feed"
-  suffix = "atom"
-  mediaType = "application/atom+xml"
-  isPlainText = true
