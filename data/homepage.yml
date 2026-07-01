@@ -31,9 +31,15 @@ portfolio_items:
   - name: Portfolio Website
     description: This website
     url: https://github.com/Michael-Gallo/portfolio-website
-    image: hugo.webp
-    image_width: 768
-    image_height: 220
+    image: hugo-480.webp
+    image_width: 480
+    image_height: 138
+    image_srcset:
+      - src: hugo-480.webp
+        width: 480
+      - src: hugo-768.webp
+        width: 768
+    image_sizes: "(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
     image_class: portfolio-logo-img
     image_alt: Hugo logo
 
