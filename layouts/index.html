@@ -110,7 +110,7 @@
               <div class="col-12 col-md-6 col-lg-4 mb-4">
                 <div class="cc-porfolio-image img-raised">
                   <a href="{{ .url }}" target="_blank" rel="noopener">
-                    <figure class="cc-effect"><img{{ with .image_class }} class="{{ . }}"{{ end }} src="{{ printf "images/%s" .image | relURL }}" width="{{ .image_width }}" height="{{ .image_height }}" alt="{{ .image_alt }}">
+                    <figure class="cc-effect"><img{{ with .image_class }} class="{{ . }}"{{ end }} src="{{ printf "images/%s" .image | relURL }}"{{ with .image_srcset }} srcset="{{ range $i, $entry := . }}{{ if $i }}, {{ end }}{{ printf "images/%s" $entry.src | relURL }} {{ $entry.width }}w{{ end }}"{{ end }}{{ with .image_sizes }} sizes="{{ . }}"{{ end }} width="{{ .image_width }}" height="{{ .image_height }}" decoding="async" alt="{{ .image_alt }}">
                       <figcaption>
                         <div class="h4">{{ .name }}</div>
                         <p>{{ .description }}</p>
