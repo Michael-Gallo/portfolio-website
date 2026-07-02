@@ -1,0 +1,18 @@
+{{- $dest := .Destination | safeURL -}}
+<img src="{{ $dest }}"
+  alt="{{ with .PlainText }}{{ . }}{{ end }}"
+  {{- with .Title }} title="{{ . }}"{{ end -}}
+  decoding="async"
+  loading="lazy"
+  {{- if not (strings.HasPrefix $dest "http") -}}
+    {{- $staticPath := printf "static/%s" (strings.TrimPrefix "/" $dest) -}}
+    {{- $ext := path.Ext $dest | lower -}}
+    {{- $processableExts := slice ".avif" ".bmp" ".gif" ".jpeg" ".jpg" ".png" ".tif" ".tiff" ".webp" -}}
+    {{- if and (fileExists $staticPath) (in $processableExts $ext) -}}
+      {{- with imageConfig $staticPath -}}
+  width="{{ .Width }}"
+  height="{{ .Height }}"
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+>
