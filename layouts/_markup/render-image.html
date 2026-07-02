@@ -1,0 +1,13 @@
+{{- $dest := .Destination | safeURL -}}
+<img src="{{ $dest }}"
+  {{- with .PlainText }} alt="{{ . }}"{{ end -}}
+  {{- with .Title }} title="{{ . }}"{{ end -}}
+  decoding="async"
+  loading="lazy"
+  {{- if not (strings.HasPrefix $dest "http") -}}
+    {{- with imageConfig (printf "static%s" $dest) -}}
+  width="{{ .Width }}"
+  height="{{ .Height }}"
+    {{- end -}}
+  {{- end -}}
+>
