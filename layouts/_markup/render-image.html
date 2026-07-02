@@ -1,13 +1,16 @@
 {{- $dest := .Destination | safeURL -}}
 <img src="{{ $dest }}"
-  {{- with .PlainText }} alt="{{ . }}"{{ end -}}
+  alt="{{ with .PlainText }}{{ . }}{{ end }}"
   {{- with .Title }} title="{{ . }}"{{ end -}}
   decoding="async"
   loading="lazy"
   {{- if not (strings.HasPrefix $dest "http") -}}
-    {{- with imageConfig (printf "static%s" $dest) -}}
+    {{- $staticPath := printf "static/%s" (strings.TrimPrefix "/" $dest) -}}
+    {{- if fileExists $staticPath -}}
+      {{- with imageConfig $staticPath -}}
   width="{{ .Width }}"
   height="{{ .Height }}"
+      {{- end -}}
     {{- end -}}
   {{- end -}}
 >
