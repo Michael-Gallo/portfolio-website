@@ -1,16 +1,21 @@
 skills:
-  - name: Golang
-    short: Go
-  - name: Linux
-    short: Li
-  - name: Python
-    short: Py
-  - name: Amazon Web Services
-    short: AWS
-  - name: Bash
-    short: Sh
-  - name: Docker
-    short: Dk
+  - name: Languages
+    items:
+      - Go
+      - Python
+      - Bash
+  - name: Backend
+    items:
+      - GraphQL
+      - gqlgen
+      - Integration testing
+  - name: Infrastructure
+    items:
+      - AWS
+      - Docker
+      - Linux
+      - Ansible
+      - Jenkins
 
 portfolio_items:
   - name: simpleical

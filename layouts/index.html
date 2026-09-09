@@ -75,14 +75,18 @@
         <div class="h4 text-center mb-4 title">Professional Skills</div>
         <div class="card">
           <div class="card-body">
-            <ul class="skill-grid">
+            <div class="skill-groups">
               {{ range hugo.Data.homepage.skills }}
-              <li class="skill-chip">
-                <span class="skill-chip-mark" aria-hidden="true">{{ .short }}</span>
-                <span class="skill-chip-name">{{ .name }}</span>
-              </li>
+              <div class="skill-group">
+                <h3 class="skill-group-title">{{ .name }}</h3>
+                <ul class="skill-group-items">
+                  {{ range .items }}
+                  <li>{{ . }}</li>
+                  {{ end }}
+                </ul>
+              </div>
               {{ end }}
-            </ul>
+            </div>
           </div>
         </div>
       </div>
