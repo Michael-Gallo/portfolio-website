@@ -26,6 +26,7 @@ assert_contains public/index.html "Batcom LLC"
 assert_contains public/index.html "Python Developer"
 assert_contains public/index.html "simpleical"
 assert_contains public/index.html "Golang"
+assert_contains public/index.html "aria-valuenow=100"
 assert_contains public/index.html "progress-bar"
 assert_not_contains public/index.html "Ansible"
 assert_exists public/images/Michael-Gallo-Resume.pdf
