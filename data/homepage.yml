@@ -1,6 +1,6 @@
 skills:
   - name: Golang
-    proficiency: 90
+    proficiency: 100
   - name: Linux
     proficiency: 85
   - name: Python
@@ -14,20 +14,13 @@ skills:
 
 portfolio_items:
   - name: simpleical
-    description: High-performance iCalendar parsing library written in Go
+    description: iCalendar parser that runs in about half the time of other Go parsers with about one-third the allocations, using only the standard library.
     url: https://github.com/Michael-Gallo/simpleical
     image: simpleical.webp
     image_width: 320
     image_height: 320
     image_class: portfolio-icon-img
     image_alt: ICS calendar file icon
-  - name: Ansible
-    description: My personal ansible playbook
-    url: https://gitlab.com/michaelagallo95/ansible-config
-    image: ansible.webp
-    image_width: 768
-    image_height: 480
-    image_alt: Ansible logo
   - name: Portfolio Website
     description: This website
     url: https://github.com/Michael-Gallo/portfolio-website
@@ -39,22 +32,48 @@ portfolio_items:
         width: 480
       - src: hugo-768.webp
         width: 768
-    image_sizes: "(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw"
+    image_sizes: "(min-width: 768px) 50vw, 100vw"
     image_class: portfolio-logo-img
     image_alt: Hugo logo
 
 experiences:
-  - dates: July 2021 - Present
+  - dates: July 2021 – Present
     company: Accenture
-    title: Tech Lead
-    description:
-      - "Lead technical delivery for a federated Golang GraphQL Gqlgen data mesh for a top 15 bank; allows data to be shared across the enterprise while complying with regulatory and internal requirements, serving ~5 million requests per day."
-      - "Served as DMN SME for a rule engine for the same client. Supported the client in the development of new business rules and led rule deployments. Developed a Python XML diff tool using lxml to generate human-readable explanations of changes within a DMN. Led JMeter performance testing of the rule engine."
-  - dates: February 2019 - July 2021
+    roles:
+      - title: Tech Lead, GraphQL Data Mesh
+        dates: April 2026 – August 2026
+        description:
+          - "Led a 5-person engineering team on technical delivery for a production Go/GraphQL data platform on AWS Lambda/Fargate serving a top-15 bank (25M daily requests, 13 consuming applications)."
+          - "Onboarded a new engineer who delivered a feature in their first sprint and presented it to project leadership."
+          - "Migrated internal developer documentation from VuePress to Hugo, replacing an unsupported toolchain and aligning documentation tooling with the team's Go ecosystem."
+      - title: Senior Software Engineer, GraphQL Data Mesh
+        dates: August 2023 – April 2026
+        description:
+          - "Built a Python CLI prototype in two weeks to generate GraphQL subgraphs; a director-led demo secured the bank's core banking organization as an internal customer and expanded account scope."
+          - "Developed a code-generation framework that produces Go services from declarative GraphQL definitions using Apollo Connectors."
+          - "Designed and implemented a Jenkins testing pipeline for 4 Go repositories, reducing integration issues and freeing up about 20% more time for new feature development."
+          - "Migrated secrets from HashiCorp Vault to enterprise-preferred AWS Secrets Manager."
+          - "Mentored three engineers in Go and conducted four technical interviews for senior Go candidates."
+          - "Ranked among top-performing consultants on a 500-person account, earning 7 quarterly excellence awards in 8 consecutive quarters."
+      - title: Software Engineer, Drools Rules Engine
+        dates: September 2021 – January 2023
+        description:
+          - "Designed, developed, and deployed a Dockerized Red Hat Drools-based fraud detection rules engine for a top-15 bank, enabling business analysts to implement logic that previously required developers."
+          - "Served as Decision Model and Notation (DMN) SME and trained client leadership on the DMN standard, enabling Accenture to hand off the rules engine to the client."
+          - "Won team of the year as part of a 10-person team across the entire bank."
+  - dates: February 2019 – July 2021
     company: JD Sports
-    title: Software Developer
+    title: Python Developer
     description:
-      - "Achieved 400% year over year growth by automating key processes as the sole developer at a small e-commerce firm. Led the entire development cycle for a Python sales reporting software to automate the restocking and vendor tracking report generation process; provided automated emails with report to back office team of 4 people Served as primary purchaser for six key wholesale accounts with annual spend per account of up to $500k."
+      - "Built Python reporting and sourcing automation as the company's first employee and sole developer, supporting 400% YoY company growth."
+      - "Built Python sales-reporting tools that cut report-generation time by nearly four days, enabling daily reporting and supplier restocking instead of a monthly cycle."
+      - "Built wholesale product-screening software that filtered out 95% of unsuitable SKUs and increased processing capacity 10×."
+  - dates: May 2014 – July 2024
+    company: Batcom LLC
+    title: Founder & Owner
+    description:
+      - "Built a children's kitchen products brand that earned 2,500+ Amazon reviews; managed sourcing, logistics, accounting, advertising, and marketing."
+      - "Sold the company in 2024."
 
 certifications:
   - url: https://verify.skilljar.com/c/nckymmk8aonm

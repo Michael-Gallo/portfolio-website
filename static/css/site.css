@@ -978,12 +978,51 @@ p {
 }
 
 /* Experience */
+.cc-experience .row > .bg-primary {
+  display: flex;
+  align-items: flex-start;
+  align-self: stretch;
+}
+
 .cc-experience .cc-experience-header {
-  padding-top: 60px;
+  padding-top: 40px;
+  padding-bottom: 40px;
   padding-right: 0;
   text-align: center;
   color: var(--color-white);
   text-transform: uppercase;
+  width: 100%;
+  min-height: 0;
+}
+
+.cc-experience .card .card-body {
+  min-height: 0;
+}
+
+.cc-experience-role {
+  margin-bottom: 1.75rem;
+}
+
+.cc-experience-role:last-child {
+  margin-bottom: 0;
+}
+
+.cc-experience-role-dates {
+  margin-top: -0.35rem;
+  margin-bottom: 0.75rem;
+  color: var(--color-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85em;
+}
+
+.cc-experience-bullets {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.cc-experience-bullets li + li {
+  margin-top: 0.5rem;
 }
 
 /* Footer */
