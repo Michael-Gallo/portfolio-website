@@ -1,26 +1,16 @@
-skill_groups:
-  - name: Programming Languages
-    items:
-      - Go
-      - Python
-      - Bash
-  - name: Backend
-    items:
-      - GraphQL
-      - gqlgen
-      - Red Hat Drools
-  - name: Cloud & Infrastructure
-    items:
-      - AWS (Lambda, Fargate, DynamoDB, Secrets Manager)
-      - Docker
-      - Terraform
-      - Linux
-  - name: DevOps & Tooling
-    items:
-      - Jenkins
-      - CI/CD
-      - SonarQube
-      - HashiCorp Vault
+skills:
+  - name: Golang
+    proficiency: 90
+  - name: Linux
+    proficiency: 85
+  - name: Python
+    proficiency: 60
+  - name: Amazon Web Services
+    proficiency: 60
+  - name: Bash
+    proficiency: 70
+  - name: Docker
+    proficiency: 50
 
 portfolio_items:
   - name: simpleical
