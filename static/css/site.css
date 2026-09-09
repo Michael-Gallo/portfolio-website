@@ -353,62 +353,11 @@ p {
   color: var(--color-primary);
 }
 
-/* Progress */
-.progress-container {
-  position: relative;
+.skill-item {
   margin-bottom: 20px;
-  font-size: 18px;
-}
-
-.progress-container + .progress-container,
-.progress-container ~ .progress-container {
-  margin-top: 15px;
-}
-
-.progress-container .progress-badge {
-  color: #888;
+  color: var(--color-primary);
   font-size: 0.8571em;
   text-transform: uppercase;
-}
-
-.progress-container .progress {
-  display: flex;
-  overflow: hidden;
-  height: 5px;
-  margin-top: 14px;
-  border-radius: 0;
-  box-shadow: none;
-  background: rgba(222, 222, 222, 0.8);
-  font-size: 18px;
-}
-
-.progress-container .progress .progress-bar {
-  height: 5px;
-  box-shadow: none;
-  background-color: #888;
-  transition: width 0.6s ease;
-}
-
-.progress-container .progress .progress-value {
-  position: absolute;
-  top: 2px;
-  right: 0;
-  color: #888;
-  font-size: 0.8571em;
-}
-
-.progress-container.progress-primary .progress {
-  background: rgba(55, 140, 63, 0.4);
-}
-
-.progress-container.progress-primary .progress-bar,
-.progress-container.progress-primary .progress-bar-primary {
-  background: var(--color-primary);
-}
-
-.progress-container.progress-primary .progress-value,
-.progress-container.progress-primary .progress-badge {
-  color: var(--color-primary);
 }
 
 /* Navbar */

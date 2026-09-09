@@ -1,16 +1,10 @@
 skills:
   - name: Golang
-    proficiency: 100
   - name: Linux
-    proficiency: 85
   - name: Python
-    proficiency: 60
   - name: Amazon Web Services
-    proficiency: 60
   - name: Bash
-    proficiency: 70
   - name: Docker
-    proficiency: 50
 
 portfolio_items:
   - name: simpleical
