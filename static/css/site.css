@@ -372,13 +372,14 @@ p {
 }
 
 .skill-group-title {
-  flex: 0 0 9rem;
+  flex: 0 0 auto;
   margin: 0;
   color: var(--color-primary);
   font-size: 0.8rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .skill-group-items {
@@ -391,6 +392,10 @@ p {
 }
 
 @media (min-width: 768px) {
+  .skill-group {
+    flex-wrap: nowrap;
+  }
+
   .skill-group-items {
     flex-wrap: nowrap;
   }
