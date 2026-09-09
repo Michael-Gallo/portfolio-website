@@ -8,7 +8,7 @@ skills:
     items:
       - GraphQL
       - gqlgen
-      - Integration testing
+      - DynamoDB
   - name: Infrastructure
     items:
       - AWS
