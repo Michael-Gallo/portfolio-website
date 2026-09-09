@@ -359,20 +359,21 @@ p {
 }
 
 .skill-groups {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-@media (min-width: 768px) {
-  .skill-groups {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.75rem;
-  }
+.skill-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 16px;
 }
 
 .skill-group-title {
-  margin: 0 0 0.85rem;
+  flex: 0 0 9rem;
+  margin: 0;
   color: var(--color-primary);
   font-size: 0.8rem;
   font-weight: 700;
@@ -387,6 +388,12 @@ p {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+@media (min-width: 768px) {
+  .skill-group-items {
+    flex-wrap: nowrap;
+  }
 }
 
 .skill-group-items li {
