@@ -5,7 +5,7 @@ disableKinds = ["taxonomy", "term"]
 summaryLength = 100000
 
 [params]
-  description = "Michael Gallo is a senior software engineer specializing in Go, Python, Linux, AWS, and scalable backend systems."
+  description = "Michael Gallo is a senior software engineer building backend platforms and developer tools in Go and Python, including federated GraphQL on AWS."
 
 [permalinks]
   blog = "/blog/:slugorcontentbasename"
