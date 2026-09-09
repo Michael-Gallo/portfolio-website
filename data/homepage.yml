@@ -1,10 +1,16 @@
 skills:
   - name: Golang
+    short: Go
   - name: Linux
+    short: Li
   - name: Python
+    short: Py
   - name: Amazon Web Services
+    short: AWS
   - name: Bash
+    short: Sh
   - name: Docker
+    short: Dk
 
 portfolio_items:
   - name: simpleical

@@ -75,15 +75,14 @@
         <div class="h4 text-center mb-4 title">Professional Skills</div>
         <div class="card">
           <div class="card-body">
-            {{ $skills := hugo.Data.homepage.skills }}
-            {{ range $i, $skill := $skills }}
-            {{ if eq (mod $i 2) 0 }}<div class="row">{{ end }}
-              <div class="col-md-6">
-                <div class="skill-item">{{ $skill.name }}</div>
-              </div>
-            {{ if eq (mod $i 2) 1 }}</div>{{ end }}
-            {{ end }}
-            {{ if eq (mod (len $skills) 2) 1 }}</div>{{ end }}
+            <ul class="skill-grid">
+              {{ range hugo.Data.homepage.skills }}
+              <li class="skill-chip">
+                <span class="skill-chip-mark" aria-hidden="true">{{ .short }}</span>
+                <span class="skill-chip-name">{{ .name }}</span>
+              </li>
+              {{ end }}
+            </ul>
           </div>
         </div>
       </div>
